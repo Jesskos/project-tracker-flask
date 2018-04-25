@@ -1,3 +1,5 @@
+
+<!-- imported table of grades into Jinja -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,5 +9,12 @@
 	<h1> {{ first }} {{ last }}</h1>
 
 	<p>GitHub Account: {{ github }}</p>
+
+	<ul>
+		{% for pair in table %}
+		<li>Project name: {{ pair[0] }}</li>
+		<li>Project grade: {{ pair[1] }}</li>
+		{% endfor%}
+	</ul>
 </body>
 </html>
